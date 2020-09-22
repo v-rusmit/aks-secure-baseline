@@ -1,0 +1,229 @@
+$ az deployment group create --resource-group rg-enterprise-networking-hubs --template-file networking/hub-default.json --parameters location=eastus2
+{
+  "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Resources/deployments/hub-default",
+  "location": null,
+  "name": "hub-default",
+  "properties": {
+    "correlationId": "4ec381a8-5c7f-4ce1-9e2e-1c1598ea8381",
+    "debugSetting": null,
+    "dependencies": [
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Network/publicIpAddresses/pip-fw-eastus2-default",
+            "resourceGroup": "rg-enterprise-networking-hubs",
+            "resourceName": "pip-fw-eastus2-default",
+            "resourceType": "Microsoft.Network/publicIpAddresses"
+          },
+          {
+            "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Network/virtualNetworks/vnet-eastus2-hub",
+            "resourceGroup": "rg-enterprise-networking-hubs",
+            "resourceName": "vnet-eastus2-hub",
+            "resourceType": "Microsoft.Network/virtualNetworks"
+          }
+        ],
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Network/azureFirewalls/fw-eastus2-hub",      
+        "resourceGroup": "rg-enterprise-networking-hubs",
+        "resourceName": "fw-eastus2-hub",
+        "resourceType": "Microsoft.Network/azureFirewalls"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.OperationalInsights/workspaces/la-networking-hub-eastus2-qxoicqawf5pyw",
+            "resourceGroup": "rg-enterprise-networking-hubs",
+            "resourceName": "la-networking-hub-eastus2-qxoicqawf5pyw",
+            "resourceType": "Microsoft.OperationalInsights/workspaces"
+          },
+          {
+            "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Network/azureFirewalls/fw-eastus2-hub",  
+            "resourceGroup": "rg-enterprise-networking-hubs",
+            "resourceName": "fw-eastus2-hub",
+            "resourceType": "Microsoft.Network/azureFirewalls"
+          }
+        ],
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Network/azureFirewalls/fw-eastus2-hub/providers/Microsoft.Insights/diagnosticSettings/default",
+        "resourceGroup": "rg-enterprise-networking-hubs",
+        "resourceName": "fw-eastus2-hub/Microsoft.Insights/default",
+        "resourceType": "Microsoft.Network/azureFirewalls/providers/diagnosticSettings"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.OperationalInsights/workspaces/la-networking-hub-eastus2-qxoicqawf5pyw",
+            "resourceGroup": "rg-enterprise-networking-hubs",
+            "resourceName": "la-networking-hub-eastus2-qxoicqawf5pyw",
+            "resourceType": "Microsoft.OperationalInsights/workspaces"
+          },
+          {
+            "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Network/virtualNetworks/vnet-eastus2-hub",
+            "resourceGroup": "rg-enterprise-networking-hubs",
+            "resourceName": "vnet-eastus2-hub",
+            "resourceType": "Microsoft.Network/virtualNetworks"
+          }
+        ],
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Network/virtualNetworks/vnet-eastus2-hub/providers/Microsoft.Insights/diagnosticSettings/default",
+        "resourceGroup": "rg-enterprise-networking-hubs",
+        "resourceName": "vnet-eastus2-hub/Microsoft.Insights/default",
+        "resourceType": "Microsoft.Network/virtualNetworks/providers/diagnosticSettings"
+      }
+    ],
+    "duration": "PT6M13.0336897S",
+    "error": null,
+    "mode": "Incremental",
+    "onErrorDeployment": null,
+    "outputResources": [
+      {
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Network/azureFirewalls/fw-eastus2-hub",      
+        "resourceGroup": "rg-enterprise-networking-hubs"
+      },
+      {
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Network/azureFirewalls/fw-eastus2-hub/providers/Microsoft.Insights/diagnosticSettings/default",
+        "resourceGroup": "rg-enterprise-networking-hubs"
+      },
+      {
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Network/publicIpAddresses/pip-fw-eastus2-default",
+        "resourceGroup": "rg-enterprise-networking-hubs"
+      },
+      {
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Network/virtualNetworks/vnet-eastus2-hub",   
+        "resourceGroup": "rg-enterprise-networking-hubs"
+      },
+      {
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Network/virtualNetworks/vnet-eastus2-hub/providers/Microsoft.Insights/diagnosticSettings/default",
+        "resourceGroup": "rg-enterprise-networking-hubs"
+      },
+      {
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.OperationalInsights/workspaces/la-networking-hub-eastus2-qxoicqawf5pyw",
+        "resourceGroup": "rg-enterprise-networking-hubs"
+      }
+    ],
+    "outputs": {
+      "hubVnetId": {
+        "type": "String",
+        "value": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Network/virtualNetworks/vnet-eastus2-hub" 
+      }
+    },
+    "parameters": {
+      "azureBastionSubnetAddressSpace": {
+        "type": "String",
+        "value": "10.200.0.96/27"
+      },
+      "azureFirewallSubnetAddressSpace": {
+        "type": "String",
+        "value": "10.200.0.0/26"
+      },
+      "azureGatewaySubnetAddressSpace": {
+        "type": "String",
+        "value": "10.200.0.64/27"
+      },
+      "hubVnetAddressSpace": {
+        "type": "String",
+        "value": "10.200.0.0/24"
+      },
+      "location": {
+        "type": "String",
+        "value": "eastus2"
+      }
+    },
+    "parametersLink": null,
+    "providers": [
+      {
+        "id": null,
+        "namespace": "Microsoft.Network",
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locations": [
+              "eastus2"
+            ],
+            "properties": null,
+            "resourceType": "virtualNetworks"
+          },
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locations": [
+              "eastus2"
+            ],
+            "properties": null,
+            "resourceType": "publicIpAddresses"
+          },
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locations": [
+              "eastus2"
+            ],
+            "properties": null,
+            "resourceType": "azureFirewalls"
+          },
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locations": [
+              "eastus2"
+            ],
+            "properties": null,
+            "resourceType": "azureFirewalls/providers/diagnosticSettings"
+          },
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locations": [
+              "eastus2"
+            ],
+            "properties": null,
+            "resourceType": "virtualNetworks/providers/diagnosticSettings"
+          }
+        ]
+      },
+      {
+        "id": null,
+        "namespace": "Microsoft.OperationalInsights",
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locations": [
+              "eastus2"
+            ],
+            "properties": null,
+            "resourceType": "workspaces"
+          }
+        ]
+      }
+    ],
+    "provisioningState": "Succeeded",
+    "templateHash": "2803718985574528412",
+    "templateLink": null,
+    "timestamp": "2020-09-17T17:29:11.807089+00:00",
+    "validatedResources": null
+  },
+  "resourceGroup": "rg-enterprise-networking-hubs",
+  "tags": null,
+  "type": "Microsoft.Resources/deployments"
+}

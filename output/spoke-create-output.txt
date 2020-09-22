@@ -1,0 +1,331 @@
+{
+  "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Resources/deployments/spoke-BU0001A0008",
+  "location": null,
+  "name": "spoke-BU0001A0008",
+  "properties": {
+    "correlationId": "532a4e78-4ca3-4670-b9ee-3d8281b8a99e",
+    "debugSetting": null,
+    "dependencies": [
+      {
+        "dependsOn": [
+          {
+            "apiVersion": "2019-11-01",
+            "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Network/azureFirewalls/fw-eastus2-hub",
+            "resourceGroup": "rg-enterprise-networking-hubs",
+            "resourceName": "fw-eastus2-hub",
+            "resourceType": "Microsoft.Network/azureFirewalls"
+          }
+        ],
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/routeTables/route-vnet-hub-spoke-BU0001A0008-00-clusternodes-to-hub",
+        "resourceGroup": "rg-enterprise-networking-spokes",
+        "resourceName": "route-vnet-hub-spoke-BU0001A0008-00-clusternodes-to-hub",
+        "resourceType": "Microsoft.Network/routeTables"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/routeTables/route-vnet-hub-spoke-BU0001A0008-00-clusternodes-to-hub",
+            "resourceGroup": "rg-enterprise-networking-spokes",
+            "resourceName": "route-vnet-hub-spoke-BU0001A0008-00-clusternodes-to-hub",
+            "resourceType": "Microsoft.Network/routeTables"
+          }
+        ],
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/virtualNetworks/vnet-hub-spoke-BU0001A0008-00",
+        "resourceGroup": "rg-enterprise-networking-spokes",
+        "resourceName": "vnet-hub-spoke-BU0001A0008-00",
+        "resourceType": "Microsoft.Network/virtualNetworks"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/virtualNetworks/vnet-hub-spoke-BU0001A0008-00",
+            "resourceGroup": "rg-enterprise-networking-spokes",
+            "resourceName": "vnet-hub-spoke-BU0001A0008-00",
+            "resourceType": "Microsoft.Network/virtualNetworks"
+          }
+        ],
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/virtualNetworks/vnet-hub-spoke-BU0001A0008-00/virtualNetworkPeerings/spoke-to-vnet-eastus2-hub",
+        "resourceGroup": "rg-enterprise-networking-spokes",
+        "resourceName": "vnet-hub-spoke-BU0001A0008-00/spoke-to-vnet-eastus2-hub",
+        "resourceType": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/virtualNetworks/vnet-hub-spoke-BU0001A0008-00",
+            "resourceGroup": "rg-enterprise-networking-spokes",
+            "resourceName": "vnet-hub-spoke-BU0001A0008-00",
+            "resourceType": "Microsoft.Network/virtualNetworks"
+          },
+          {
+            "apiVersion": "2019-11-01",
+            "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Network/virtualNetworks/vnet-eastus2-hub",
+            "resourceGroup": "rg-enterprise-networking-hubs",
+            "resourceName": "vnet-eastus2-hub",
+            "resourceType": "Microsoft.Network/virtualNetworks"
+          }
+        ],
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/virtualNetworks/vnet-hub-spoke-BU0001A0008-00/providers/Microsoft.Insights/diagnosticSettings/toHub",
+        "resourceGroup": "rg-enterprise-networking-spokes",
+        "resourceName": "vnet-hub-spoke-BU0001A0008-00/Microsoft.Insights/toHub",
+        "resourceType": "Microsoft.Network/virtualNetworks/providers/diagnosticSettings"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/virtualNetworks/vnet-hub-spoke-BU0001A0008-00",
+            "resourceGroup": "rg-enterprise-networking-spokes",
+            "resourceName": "vnet-hub-spoke-BU0001A0008-00",
+            "resourceType": "Microsoft.Network/virtualNetworks"
+          },
+          {
+            "apiVersion": "2019-11-01",
+            "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Network/virtualNetworks/vnet-eastus2-hub",
+            "resourceGroup": "rg-enterprise-networking-hubs",
+            "resourceName": "vnet-eastus2-hub",
+            "resourceType": "Microsoft.Network/virtualNetworks"
+          }
+        ],
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Resources/deployments/CreateHubToSpokePeer",
+        "resourceGroup": "rg-enterprise-networking-hubs",
+        "resourceName": "CreateHubToSpokePeer",
+        "resourceType": "Microsoft.Resources/deployments"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/virtualNetworks/vnet-hub-spoke-BU0001A0008-00",
+            "resourceGroup": "rg-enterprise-networking-spokes",
+            "resourceName": "vnet-hub-spoke-BU0001A0008-00",
+            "resourceType": "Microsoft.Network/virtualNetworks"
+          },
+          {
+            "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/privateDnsZones/privatelink.azurecr.io",
+            "resourceGroup": "rg-enterprise-networking-spokes",
+            "resourceName": "privatelink.azurecr.io",
+            "resourceType": "Microsoft.Network/privateDnsZones"
+          }
+        ],
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/privateDnsZones/privatelink.azurecr.io/virtualNetworkLinks/qo57v2unety3k",
+        "resourceGroup": "rg-enterprise-networking-spokes",
+        "resourceName": "privatelink.azurecr.io/qo57v2unety3k",
+        "resourceType": "Microsoft.Network/privateDnsZones/virtualNetworkLinks"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/virtualNetworks/vnet-hub-spoke-BU0001A0008-00",
+            "resourceGroup": "rg-enterprise-networking-spokes",
+            "resourceName": "vnet-hub-spoke-BU0001A0008-00",
+            "resourceType": "Microsoft.Network/virtualNetworks"
+          },
+          {
+            "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/privateDnsZones/privatelink.vaultcore.azure.net",
+            "resourceGroup": "rg-enterprise-networking-spokes",
+            "resourceName": "privatelink.vaultcore.azure.net",
+            "resourceType": "Microsoft.Network/privateDnsZones"
+          }
+        ],
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/privateDnsZones/privatelink.vaultcore.azure.net/virtualNetworkLinks/qo57v2unety3k",
+        "resourceGroup": "rg-enterprise-networking-spokes",
+        "resourceName": "privatelink.vaultcore.azure.net/qo57v2unety3k",
+        "resourceType": "Microsoft.Network/privateDnsZones/virtualNetworkLinks"
+      }
+    ],
+    "duration": "PT1M48.2855804S",
+    "error": null,
+    "mode": "Incremental",
+    "onErrorDeployment": null,
+    "outputResources": [
+      {
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Network/virtualNetworks/vnet-eastus2-hub/virtualNetworkPeerings/hub-to-vnet-hub-spoke-BU0001A0008-00",
+        "resourceGroup": "rg-enterprise-networking-hubs"
+      },
+      {
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/privateDnsZones/privatelink.azurecr.io",
+        "resourceGroup": "rg-enterprise-networking-spokes"
+      },
+      {
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/privateDnsZones/privatelink.azurecr.io/virtualNetworkLinks/qo57v2unety3k",
+        "resourceGroup": "rg-enterprise-networking-spokes"
+      },
+      {
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/privateDnsZones/privatelink.vaultcore.azure.net",
+        "resourceGroup": "rg-enterprise-networking-spokes"
+      },
+      {
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/privateDnsZones/privatelink.vaultcore.azure.net/virtualNetworkLinks/qo57v2unety3k",
+        "resourceGroup": "rg-enterprise-networking-spokes"
+      },
+      {
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/publicIpAddresses/pip-BU0001A0008-00",
+        "resourceGroup": "rg-enterprise-networking-spokes"
+      },
+      {
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/routeTables/route-vnet-hub-spoke-BU0001A0008-00-clusternodes-to-hub",
+        "resourceGroup": "rg-enterprise-networking-spokes"
+      },
+      {
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/virtualNetworks/vnet-hub-spoke-BU0001A0008-00",
+        "resourceGroup": "rg-enterprise-networking-spokes"
+      },
+      {
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/virtualNetworks/vnet-hub-spoke-BU0001A0008-00/providers/Microsoft.Insights/diagnosticSettings/toHub",
+        "resourceGroup": "rg-enterprise-networking-spokes"
+      },
+      {
+        "id": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/virtualNetworks/vnet-hub-spoke-BU0001A0008-00/virtualNetworkPeerings/spoke-to-vnet-eastus2-hub",
+        "resourceGroup": "rg-enterprise-networking-spokes"
+      }
+    ],
+    "outputs": {
+      "appGwPublicIpAddress": {
+        "type": "String",
+        "value": "52.251.20.251"
+      },
+      "clusterVnetResourceId": {
+        "type": "String",
+        "value": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/virtualNetworks/vnet-hub-spoke-BU0001A0008-00"
+      },
+      "nodepoolSubnetResourceIds": {
+        "type": "Array",
+        "value": [
+          "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-spokes/providers/Microsoft.Network/virtualNetworks/vnet-hub-spoke-BU0001A0008-00/subnets/snet-clusternodes"
+        ]
+      }
+    },
+    "parameters": {
+      "hubVnetResourceId": {
+        "type": "String",
+        "value": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Network/virtualNetworks/vnet-eastus2-hub"
+      },
+      "location": {
+        "type": "String",
+        "value": "eastus2"
+      }
+    },
+    "parametersLink": null,
+    "providers": [
+      {
+        "id": null,
+        "namespace": "Microsoft.Network",
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locations": [
+              "eastus2"
+            ],
+            "properties": null,
+            "resourceType": "routeTables"
+          },
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locations": [
+              "eastus2"
+            ],
+            "properties": null,
+            "resourceType": "virtualNetworks"
+          },
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locations": [
+              null
+            ],
+            "properties": null,
+            "resourceType": "virtualNetworks/virtualNetworkPeerings"
+          },
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locations": [
+              null
+            ],
+            "properties": null,
+            "resourceType": "virtualNetworks/providers/diagnosticSettings"
+          },
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locations": [
+              "global"
+            ],
+            "properties": null,
+            "resourceType": "privateDnsZones"
+          },
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locations": [
+              "global"
+            ],
+            "properties": null,
+            "resourceType": "privateDnsZones/virtualNetworkLinks"
+          },
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locations": [
+              "eastus2"
+            ],
+            "properties": null,
+            "resourceType": "publicIpAddresses"
+          }
+        ]
+      },
+      {
+        "id": null,
+        "namespace": "Microsoft.Resources",
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locations": [
+              null
+            ],
+            "properties": null,
+            "resourceType": "deployments"
+          }
+        ]
+      }
+    ],
+    "provisioningState": "Succeeded",
+    "templateHash": "9114416724499468787",
+    "templateLink": null,
+    "timestamp": "2020-09-22T00:16:53.266988+00:00",
+    "validatedResources": null
+  },
+  "resourceGroup": "rg-enterprise-networking-spokes",
+  "tags": null,
+  "type": "Microsoft.Resources/deployments"
+}

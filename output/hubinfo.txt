@@ -1,0 +1,6 @@
+    "outputs": {
+      "hubVnetId": {
+        "type": "String",
+        "value": "/subscriptions/018bf144-3a6d-4c13-b1d3-d100a03adc6b/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Network/virtualNetworks/vnet-eastus2-hub" 
+      }
+    },
